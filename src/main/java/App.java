@@ -4,7 +4,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class App {
-    private static final Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
     private static final HashMap patients = new HashMap();
     private static BoundedPriorityQueue[] docQueue;
     public static void main(String[] args) {
@@ -92,24 +92,31 @@ public class App {
         }
     }
 
-    private static void deletePatient() {
-        System.out.print("Enter the patient's first name: ");
-        String firstName = scanner.nextLine();
-        System.out.print("Enter the patient's last name: ");
-        String lastName = scanner.nextLine();
-        System.out.print("Enter the patient's date of birth (yyyy-mm-dd): ");
-        LocalDate dateOfBirth = LocalDate.parse(scanner.nextLine());
 
-        String key = firstName + lastName + dateOfBirth;
-        Patient patient = patients.remove(key);
-        if (patient != null) {
-            for (BoundedPriorityQueue queue : docQueue) {
-                queue.removeAppointmentsForPatient(patient);
-            }
-            System.out.println("Patient deleted successfully.");
-        } else {
-            System.out.println("Patient not found in the practice.");
+private static void deletePatient() {
+    Scanner scanner = new Scanner(System.in);
+    HashMap<String, Patient> patients = new HashMap<>();
+    BoundedPriorityQueue[] docQueue;
+
+    System.out.print("Enter the patient's first name: ");
+    String firstName = scanner.nextLine();
+    System.out.print("Enter the patient's last name: ");
+    String lastName = scanner.nextLine();
+    System.out.print("Enter the patient's date of birth (yyyy-mm-dd): ");
+    LocalDate dateOfBirth = LocalDate.parse(scanner.nextLine());
+
+    String key = firstName + lastName + dateOfBirth;
+    Patient patient = patients.remove(key);
+    if (patient != null) {
+        for (BoundedPriorityQueue queue : docQueue) {
+            queue.removeAppointmentsForPatient(patient);
         }
+        System.out.println("Patient deleted successfully.");
+    } else {
+        System.out.println("Patient not found in the practice.");
     }
+}
+
+
 
 }
