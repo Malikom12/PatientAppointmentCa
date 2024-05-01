@@ -45,6 +45,26 @@ public class LinkedList {
     }
 
 
+    public boolean add(Appointment toBeAdded) {
+        Node newNode = new Node(toBeAdded);
+
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            Node current = this.head;
+            while (current.getNext()!= null) {
+                current = current.getNext();
+            }
+            current.setNext(newNode);
+        }
+
+        this.numberOfElements++;
+        return true;
+    }
+
+
+
+
 
 
 
