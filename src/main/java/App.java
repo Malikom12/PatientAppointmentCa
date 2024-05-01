@@ -109,7 +109,6 @@ private static void deletePatient() {
     Patient patient = patients.remove(key);
     if (patient != null) {
         for (BoundedPriorityQueue queue : docQueue) {
-            queue.removeAppointmentsForPatient(patient);
         }
         System.out.println("Patient deleted successfully.");
     } else {
