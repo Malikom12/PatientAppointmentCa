@@ -29,6 +29,42 @@ public class LinkedList {
     }
 
 
+    public int indexOf(Appointment appointmentToBeFound) {
+        Node current = this.head;
+        int index = 0;
+
+        while (current!= null) {
+            if (current.getData().equals(appointmentToBeFound)) {
+                return index;
+            }
+            current = current.getNext();
+            index++;
+        }
+
+        return -1;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
