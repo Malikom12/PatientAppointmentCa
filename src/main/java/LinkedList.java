@@ -62,6 +62,21 @@ public class LinkedList {
         return true;
     }
 
+    public Appointment set(Appointment toBeAdded, int position) {
+        if (position < 0 || position >= this.numberOfElements) {
+            throw new IllegalArgumentException("Invalid position");
+        }
+
+        Node current = this.head;
+        for (int i = 0; i < position; i++) {
+            current = current.getNext();
+        }
+
+        Appointment temp = current.getData();
+        current.setData(toBeAdded);
+        return temp;
+    }
+
 
 
 
