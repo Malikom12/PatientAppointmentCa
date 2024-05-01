@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 public class HashMap {
     private final LinkedList<Entry>[] map;
     private int count;
@@ -13,21 +14,25 @@ public class HashMap {
         return slot;
     }
 
-    public String remove(String key){
+    public Patient remove(String key) {
         int slot = hashFunction(key);
-        if(map[slot] == null){
-            return null;
-        }
-        if(!map[slot].key.equals(key)){
+        if (map[slot] == null) {
             return null;
         }
 
-        String toBeDeleted = map[slot].value;
-        map[slot].value = null;
-        return toBeDeleted;
+        for (Entry entry : map[slot]) {
+            if (entry.key.equals(key)) {
+                Patient toBeDeleted = entry.value;
+                map[slot].remove(entry);
+                count--;
+                return toBeDeleted;
+            }
+        }
+
+        return null;
     }
 
-    public String get(String key){
+    public Patient get(String key){
         if(key == null){
             throw new IllegalArgumentException("Null cannot be used as a key");
         }
@@ -48,7 +53,7 @@ public class HashMap {
     }
 
 
-    public String put(String key, String value){
+    public Patient put(String key, Patient value){
         int slot = hashFunction(key);
         if(map[slot] == null){
             LinkedList<Entry> slotList = new LinkedList<Entry>();
@@ -57,8 +62,8 @@ public class HashMap {
 
         for(Entry e: map[slot]){
             if(e.key.equals(key)){
-                String oldValue = e.value;
-                e.value = value;
+                Patient oldValue = e.value;
+                e.value.equals(value);
                 return oldValue;
             }
         }

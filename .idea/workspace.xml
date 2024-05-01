@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ba94896-49a6-4083-b995-3a146944b552" name="Changes" comment="Created a HashMap Class&#10;Gave it a constructor a hashfunction method.&#10;Created an Entry Method">
+    <list default="true" id="4ba94896-49a6-4083-b995-3a146944b552" name="Changes" comment="Added a put method which adds key value pair to our HashMap">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HashMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714560380671</updated>
-      <workItem from="1714560381752" duration="5748000" />
+      <workItem from="1714560381752" duration="7154000" />
     </task>
     <task id="LOCAL-00001" summary="Created Appointment class">
       <option name="closed" value="true" />
@@ -98,7 +99,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714569673115</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished remove and get method">
+      <option name="closed" value="true" />
+      <created>1714570081173</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714570081173</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added a put method which adds key value pair to our HashMap">
+      <option name="closed" value="true" />
+      <created>1714570292723</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714570292723</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +126,8 @@
     <MESSAGE value="Finished Appointment class&#10;Gave it a constructor, finished getters and setters for the class.&#10;Gave it a compare and equals to method." />
     <MESSAGE value="Added a no argument constructor" />
     <MESSAGE value="Created a HashMap Class&#10;Gave it a constructor a hashfunction method.&#10;Created an Entry Method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a HashMap Class&#10;Gave it a constructor a hashfunction method.&#10;Created an Entry Method" />
+    <MESSAGE value="Finished remove and get method" />
+    <MESSAGE value="Added a put method which adds key value pair to our HashMap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a put method which adds key value pair to our HashMap" />
   </component>
 </project>
