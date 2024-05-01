@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ba94896-49a6-4083-b995-3a146944b552" name="Changes" comment="Changed the remove method as it wasnt correctly setup to get current entry but was rather getting the linkedlist entry point">
-      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+    <list default="true" id="4ba94896-49a6-4083-b995-3a146944b552" name="Changes" comment="Created an App,&#10;asks user for number of appts per doctor, how many doctors are working in that day and their names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HashMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714560380671</updated>
-      <workItem from="1714560381752" duration="8640000" />
+      <workItem from="1714560381752" duration="10325000" />
     </task>
     <task id="LOCAL-00001" summary="Created Appointment class">
       <option name="closed" value="true" />
@@ -123,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714571572395</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Created an App,&#10;asks user for number of appts per doctor, how many doctors are working in that day and their names">
+      <option name="closed" value="true" />
+      <created>1714572888599</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714572888599</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +146,7 @@
     <MESSAGE value="Finished remove and get method" />
     <MESSAGE value="Added a put method which adds key value pair to our HashMap" />
     <MESSAGE value="Changed the remove method as it wasnt correctly setup to get current entry but was rather getting the linkedlist entry point" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the remove method as it wasnt correctly setup to get current entry but was rather getting the linkedlist entry point" />
+    <MESSAGE value="Created an App,&#10;asks user for number of appts per doctor, how many doctors are working in that day and their names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created an App,&#10;asks user for number of appts per doctor, how many doctors are working in that day and their names" />
   </component>
 </project>

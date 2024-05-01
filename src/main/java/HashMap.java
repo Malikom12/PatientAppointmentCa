@@ -8,7 +8,7 @@ public class HashMap {
         count = 0;
     }
 
-    private int hashFunction(String key){
+    protected int hashFunction(String key){
         int slot = Math.abs(key.hashCode());
         slot = slot % map.length;
         return slot;
