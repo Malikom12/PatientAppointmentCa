@@ -83,11 +83,33 @@ public class App {
         LocalDate joinedDate = LocalDate.parse(sc.nextLine());
 
         Patient patient = new Patient(firstName, lastName, dateOfBirth, joinedDate);
-        if (patients.hashFunction(firstName+lastName+dateOfBirth) {
+        String key = firstName+lastName+dateOfBirth;
+        if (patients.get(key) != null) {
             System.out.println("Patient already exists in the practice.");
         } else {
-            patients.add(patient);
+            patients.put(key, patient);
             System.out.println("Patient added successfully.");
         }
     }
+
+    private static void deletePatient() {
+        System.out.print("Enter the patient's first name: ");
+        String firstName = scanner.nextLine();
+        System.out.print("Enter the patient's last name: ");
+        String lastName = scanner.nextLine();
+        System.out.print("Enter the patient's date of birth (yyyy-mm-dd): ");
+        LocalDate dateOfBirth = LocalDate.parse(scanner.nextLine());
+
+        String key = firstName + lastName + dateOfBirth;
+        Patient patient = patients.remove(key);
+        if (patient != null) {
+            for (BoundedPriorityQueue queue : docQueue) {
+                queue.removeAppointmentsForPatient(patient);
+            }
+            System.out.println("Patient deleted successfully.");
+        } else {
+            System.out.println("Patient not found in the practice.");
+        }
+    }
+
 }
