@@ -5,11 +5,21 @@ public class LinkedList {
 
     private int numberOfElements;
 
+    private final int maxSize;
+
     public LinkedList() {
         this.head = null;
         this.tail = null;
         this.numberOfElements = 0;
+        this.maxSize = 10;
     }
+    public LinkedList(int maxSize) {
+        this.head = null;
+        this.tail = null;
+        this.numberOfElements = 0;
+        this.maxSize = maxSize;
+    }
+
 
     public int size() {
         return this.numberOfElements;
