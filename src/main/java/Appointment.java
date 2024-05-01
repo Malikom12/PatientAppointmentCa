@@ -10,6 +10,9 @@ public class Appointment implements Comparable<Appointment>{
     private int triageLevel;
     private String doctorName;
 
+    public Appointment(){
+
+    }
     public Appointment(String firstName, String lastName, LocalDate dateOfBirth, String issue, LocalDate date, int triageLevel, String doctorName){
         this.firstName = firstName;
         this.lastName = lastName;
