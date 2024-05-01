@@ -109,7 +109,7 @@ public class Appointment implements Comparable<Appointment>{
         if (triageComparison != 0) {
             return triageComparison;
         }
-
+//committing
         return this.date.compareTo(other.date);
     }
 }
