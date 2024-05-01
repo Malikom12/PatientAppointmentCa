@@ -104,6 +104,17 @@ public class LinkedList {
     }
 
 
+    public boolean isEmpty() {
+        if (this.head == null) {
+            return true;
+        }
+        return false;
+    }
+
+
+
+
+
 
 
 
