@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.LinkedList;
+import java.util.Objects;
 
 public class Patient {
     private String firstName;
@@ -57,6 +58,28 @@ public class Patient {
     public void setAppointments(LinkedList<Appointment> appointments) {
         this.appointments = appointments;
     }
+
+    @Override
+    public boolean equals(Object otherPatient) {
+        //Checks if the object is an instance of the class
+        if (this == otherPatient) return true;
+        //Checks for null or if they are not the same class
+        if (otherPatient == null || getClass() != otherPatient.getClass()) return false;
+
+        Patient patient = (Patient) otherPatient;
+        //Checks if the first name, last name, and date of birth are the same
+        return Objects.equals(firstName, patient.firstName) &&
+                Objects.equals(lastName, patient.lastName) &&
+                Objects.equals(dateOfBirth, patient.dateOfBirth);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, dateOfBirth);
+    }
+
+
+
 
 
 
