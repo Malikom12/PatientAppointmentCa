@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class LinkedList {
 
     private Node head;
@@ -25,6 +27,9 @@ public class LinkedList {
         return this.numberOfElements;
     }
 
+    public boolean isFull() {
+        return numberOfElements == maxSize;
+    }
     public Appointment get(int position) {
         if (position < 0 || position >= this.numberOfElements) {
             return null;
@@ -120,6 +125,35 @@ public class LinkedList {
         }
         return false;
     }
+
+    public Appointment poll() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("The queue is empty");
+        }
+        Appointment firstAppointment = head.getData();
+        head = head.getNext();
+        numberOfElements--;
+        return firstAppointment;
+    }
+
+    public Appointment peek() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("The queue is empty");
+        }
+        return head.getData();
+    }
+
+
+    public Appointment remove() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("The queue is empty");
+        }
+        Appointment firstAppointment = head.getData();
+        head = head.getNext();
+        numberOfElements--;
+        return firstAppointment;
+    }
+
 
 
 
