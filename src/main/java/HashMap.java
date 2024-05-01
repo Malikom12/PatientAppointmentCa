@@ -48,6 +48,26 @@ public class HashMap {
     }
 
 
+    public String put(String key, String value){
+        int slot = hashFunction(key);
+        if(map[slot] == null){
+            LinkedList<Entry> slotList = new LinkedList<Entry>();
+            map[slot] = slotList;
+        }
+
+        for(Entry e: map[slot]){
+            if(e.key.equals(key)){
+                String oldValue = e.value;
+                e.value = value;
+                return oldValue;
+            }
+        }
+        Entry newEntry = new Entry(key, value);
+        map[slot].add(newEntry);
+        count++;
+
+        return null;
+    }
 
     private static class Entry{
         protected String key;
