@@ -78,6 +78,36 @@ public class LinkedList {
     }
 
 
+    public boolean remove(Appointment toBeRemoved) {
+        if (toBeRemoved == null) {
+            return false;
+        }
+
+        Node current = this.head;
+        Node previous = null;
+
+        while (current!= null) {
+            if (current.getData().equals(toBeRemoved)) {
+                if (previous == null) {
+                    this.head = current.getNext();
+                } else {
+                    previous.setNext(current.getNext());
+                }
+                this.numberOfElements--;
+                return true;
+            }
+            previous = current;
+            current = current.getNext();
+        }
+
+        return false;
+    }
+
+
+
+
+
+
 
 
 
